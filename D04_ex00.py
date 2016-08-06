@@ -16,13 +16,34 @@
 # Body
 
 
+def random():
+ import random
+ random_no = random.randrange(1,25,1)
+ print("The random no is: "+str(random_no))
+ count = 0
+
+ while count < 5:
+    try:
+        user = int(input('Enter a number'))
+        if user == random_no:
+            print("Correct!!!!!")
+            break
+        elif user > random_no:
+            print("Too High!")
+            count = count + 1
+        elif user < random_no:
+            print("Too Low!")
+            count = count + 1
+    except:
+        count = count + 1
+        print("Enter a No")
 
 
 ################################################################################
 def main():
 
 
-    print("Hello World!") # Remove this and replace with your function calls
+    random()
     
 
 if __name__ == '__main__':
