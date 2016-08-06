@@ -12,7 +12,7 @@
 ###############################################################################
 # Body
 
-
+#Correct
 def any_lowercase1(s):
     """Explain what is wrong, if anything, here.
     """
@@ -22,7 +22,7 @@ def any_lowercase1(s):
         else:
             return False
 
-
+#Incorrect.Doesnt iterate over the actual string but only checks a static string with value 'c'
 def any_lowercase2(s):
     """Explain what is wrong, if anything, here.
     """
@@ -32,7 +32,7 @@ def any_lowercase2(s):
         else:
             return 'False'
 
-
+#Incorrect. Only returns the status of the last element in the string
 def any_lowercase3(s):
     """Explain what is wrong, if anything, here.
     """
@@ -40,7 +40,7 @@ def any_lowercase3(s):
         flag = c.islower()
     return flag
 
-
+#Corret
 def any_lowercase4(s):
     """Explain what is wrong, if anything, here.
     """
@@ -49,7 +49,9 @@ def any_lowercase4(s):
         flag = flag or c.islower()
     return flag
 
-
+#Incorrect. The return statement will exit the entire function. If we encounter
+# an uppercase letter first, the function will just exit without checking the
+# other elements.
 def any_lowercase5(s):
     """Explain what is wrong, if anything, here.
     """
@@ -67,7 +69,10 @@ def main():
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
     print("Hello World!")
-
+    print(any_lowercase2("AVIDIXIT"))
+    print(any_lowercase3("avidixiT"))
+    print(any_lowercase5("Avidixit"))
+    
 
 if __name__ == '__main__':
     main()
